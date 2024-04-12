@@ -14,6 +14,18 @@ def create_dict(names,goals,goals_avoided,assists):
 
     return players
 
+def get_scorer(players):
+    """
+    This function returns a tuple with
+    the name of the scorer and his/her number
+    of goals 
+    """
+
+    scorers_name, goals = max(players.items(), key = lambda x : x[1][0])
+
+    return scorers_name, goals[0]
+
+
 
 
 
