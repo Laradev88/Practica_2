@@ -27,7 +27,12 @@ def get_scorer(players):
 
 def best_performance(players):
     """
-    This function
+    This function gets the most influential player
+    by creating a list of tuples with each player's name
+    and performance score calculated with this values:
+    goals = 1.5, goals_avoided = 1.25, assists = 1
+    Then it returns the name of the player 
+    with the maximum performance value
     """
     performances = [(player, (values[0] * 1.5) + (values[1] * 1.25) + values[2]) for player, values in players.items()]
 
@@ -36,8 +41,13 @@ def best_performance(players):
     return top_performer[0]
 
 
+def goal_average(goals):
+    """
+    This function returns the average of goals
+    per match this season (25 matches played)
+    """
 
-
+    return sum(goals)/25
 
 
 
