@@ -49,7 +49,15 @@ def goal_average(goals):
 
     return sum(goals)/25
 
+def get_scorer_average(players):
+    """
+    This function returns the goal average of the
+    scorer, usig the function "get_scorer"
+    """
 
+    player = get_scorer(players)
+
+    return player[1]/25
 
 
 
