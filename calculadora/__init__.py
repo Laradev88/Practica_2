@@ -34,7 +34,7 @@ def best_performance(players):
     Then it returns the name of the player 
     with the maximum performance value
     """
-    performances = [(player, (values[0] * 1.5) + (values[1] * 1.25) + values[1]) for player, values in players.items()]
+    performances = [(player, (values[0] * 1.5) + (values[1] * 1.25) + values[2]) for player, values in players.items()]
 
     top_performer = max(performances, key = lambda x : x[1])
 
